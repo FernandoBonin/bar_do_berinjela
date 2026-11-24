@@ -1,0 +1,6 @@
+{
+  "name": "Bar do Berinjela — Cardápio Digital",
+  "description": "Cardápio digital de consulta do Bar do Berinjela no Tatuapé, São Paulo. Desde 1964, a mesma família no mesmo lugar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

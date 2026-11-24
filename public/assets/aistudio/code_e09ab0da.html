@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar do Berinjela — Categorias (Desktop)</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'eggplant-deep': '#46264E',
+        'terracotta-warm': '#B85438',
+        'olive-muted': '#5A6648',
+        'cream-paper': '#FBF6EE',
+        'charcoal-ink': '#231F20',
+        'light-primary': '#2F1037',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#46264E',
+        'light-on-primary-container': '#F4E4F7',
+        'light-secondary': '#9E4127',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#F7DCD3',
+        'light-on-secondary-container': '#601400',
+        'light-tertiary': '#3F4B2F',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#E3ECD4',
+        'light-on-tertiary-container': '#29341A',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FBF6EE',
+        'light-on-background': '#231F20',
+        'light-surface': '#FBF6EE',
+        'light-surface-dim': '#E8DFD1',
+        'light-surface-bright': '#FFFDF9',
+        'light-surface-container-lowest': '#FFFDF9',
+        'light-surface-container-low': '#F6EFE4',
+        'light-surface-container': '#EFE6D8',
+        'light-surface-container-high': '#E7DDCD',
+        'light-surface-container-highest': '#DFD4C2',
+        'light-on-surface': '#231F20',
+        'light-surface-variant': '#E6DDD3',
+        'light-on-surface-variant': '#4C4540',
+        'light-outline': '#7D736B',
+        'light-outline-variant': '#CFC4B8',
+        'light-inverse-surface': '#231F20',
+        'light-inverse-on-surface': '#FBF6EE',
+        'light-inverse-primary': '#E4B8EA',
+        'dark-primary': '#E4B8EA',
+        'dark-on-primary': '#44244C',
+        'dark-primary-container': '#46264E',
+        'dark-on-primary-container': '#F4E4F7',
+        'dark-secondary': '#FFB5A0',
+        'dark-on-secondary': '#601400',
+        'dark-secondary-container': '#7F2A12',
+        'dark-on-secondary-container': '#FFDBD1',
+        'dark-tertiary': '#BECBA7',
+        'dark-on-tertiary': '#29341A',
+        'dark-tertiary-container': '#2B361C',
+        'dark-on-tertiary-container': '#DAE8C2',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#1A1617',
+        'dark-on-background': '#F4EDE3',
+        'dark-surface': '#1A1617',
+        'dark-surface-dim': '#1A1617',
+        'dark-surface-bright': '#3D3637',
+        'dark-surface-container-lowest': '#131011',
+        'dark-surface-container-low': '#231F20',
+        'dark-surface-container': '#2A2526',
+        'dark-surface-container-high': '#342E2F',
+        'dark-surface-container-highest': '#3F3839',
+        'dark-on-surface': '#F4EDE3',
+        'dark-surface-variant': '#4C4540',
+        'dark-on-surface-variant': '#D5C9BE',
+        'dark-outline': '#9B9087',
+        'dark-outline-variant': '#4C4540',
+        'dark-inverse-surface': '#F4EDE3',
+        'dark-inverse-on-surface': '#231F20',
+        'dark-inverse-primary': '#75527D',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'xs': '4px',
+        'sm': '8px',
+        'md': '16px',
+        'lg': '24px',
+        'xl': '32px',
+        '2xl': '48px',
+        '3xl': '64px',
+      },
+      fontFamily: {
+        'display': ['"Alegreya"', 'sans-serif'],
+        'headline': ['"Alegreya"', 'sans-serif'],
+        'title': ['"Lato"', 'sans-serif'],
+        'body': ['"Lato"', 'sans-serif'],
+        'label': ['"Lato"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['48px', { lineHeight: '54px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['32px', { lineHeight: '38px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['36px', { lineHeight: '42px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.2px', fontWeight: '700' }],
+        'headline-md': ['28px', { lineHeight: '34px', letterSpacing: '-0.15px', fontWeight: '700' }],
+        'headline-sm': ['22px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-lg': ['20px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0.1px', fontWeight: '700' }],
+        'title-sm': ['14px', { lineHeight: '20px', letterSpacing: '0.1px', fontWeight: '700' }],
+        'body-lg': ['17px', { lineHeight: '26px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['15px', { lineHeight: '23px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['13px', { lineHeight: '19px', letterSpacing: '0.1px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.4px', fontWeight: '700' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.5px', fontWeight: '700' }],
+        'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.5px', fontWeight: '700' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.6px', fontWeight: '600' }],
+      },
+      transitionDuration: {
+        'state-change': '150ms',
+        'surface-enter': '240ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&amp;family=Lato:wght@400;700&amp;family=Source+Code+Pro:wght@500;600&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-surface text-light-on-surface font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col bg-light-surface" data-stitch-vh="min-h-[1024px]===min-h-screen">
+
+    <!-- Full-Width Horizontal Desktop Header -->
+    <header class="w-full border-b border-light-outline-variant bg-light-surface sticky top-0 z-30">
+      <div class="max-w-7xl mx-auto px-md lg:px-xl py-md flex flex-wrap items-center justify-between gap-md">
+        <a href="../home-desktop/HomeDesktop.html" class="flex items-center gap-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-light-primary rounded">
+          <div class="w-10 h-10 rounded bg-light-primary text-light-on-primary flex items-center justify-center shrink-0">
+            <span class="font-headline text-headline-sm" data-design-text-token="headline-sm">B</span>
+          </div>
+          <div class="flex flex-col">
+            <span data-design-text-token="title-lg" class="font-headline text-title-lg text-light-on-surface leading-none">Bar do Berinjela</span>
+            <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant">TATUAPÉ, SÃO PAULO · DESDE 1964</span>
+          </div>
+        </a>
+
+        <nav aria-label="Navegação principal" class="flex items-center gap-lg lg:gap-xl">
+          <a href="../home-desktop/HomeDesktop.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-light-primary py-xs transition-colors duration-state-change">
+            <span data-design-text-token="label-lg">Início</span>
+          </a>
+          <a href="CategoriesDesktop.html" aria-current="page" class="font-label text-label-lg text-light-primary border-b-2 border-light-primary py-xs">
+            <span data-design-text-token="label-lg">Categorias</span>
+          </a>
+          <a href="../bolinhos-desktop/BolinhosDesktop.html" class="font-label text-label-lg text-light-on-surface-variant hover:text-light-primary py-xs transition-colors duration-state-change">
+            <span data-design-text-token="label-lg">Bolinhos</span>
+          </a>
+        </nav>
+
+        <span data-component-id="badge-heritage" data-component-type="badge" data-component-variant="status" role="status" class="hidden lg:inline-flex items-center gap-xs px-md py-xs rounded-full bg-light-tertiary-container text-light-on-tertiary-container border border-light-outline-variant shrink-0">
+          <span class="material-symbols-outlined text-body-sm" aria-hidden="true">menu_book</span>
+          <span data-design-text-token="label-md" class="font-label text-label-md">Cardápio de Consulta</span>
+        </span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-md lg:px-xl py-xl lg:py-2xl flex flex-col gap-2xl">
+
+      <section class="flex flex-wrap items-end justify-between gap-md border-b border-light-outline-variant pb-lg">
+        <div class="flex flex-col gap-xs">
+          <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-secondary">CARDÁPIO DIGITAL</span>
+          <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg-mobile lg:text-headline-lg text-light-on-surface">
+            Categorias da Casa
+          </h1>
+          <p data-design-text-token="body-lg" class="font-body text-body-lg text-light-on-surface-variant text-pretty max-w-prose">
+            Explore as seções do cardápio tradicional do Bar do Berinjela: dos bolinhos premiados às bebidas de boteco.
+          </p>
+        </div>
+        <span data-design-text-token="mono-sm" class="font-mono text-mono-sm text-light-on-surface-variant">9 SEÇÕES</span>
+      </section>
+
+      <!-- 3-Column Desktop Category Grid -->
+      <section aria-label="Categorias do cardápio" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg items-stretch">
+
+        <!-- 1. Berinjelas -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-primary-container text-light-on-primary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">eco</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Berinjelas</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Receitas clássicas de berinjela que dão nome e identidade à casa.</p>
+          </div>
+        </a>
+
+        <!-- 2. Especiais -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-secondary-container text-light-on-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">workspace_premium</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Especiais</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Pratos tradicionais e criações especiais da cozinha da família.</p>
+          </div>
+        </a>
+
+        <!-- 3. Bolinhos (Featured) -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border-2 border-light-primary rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-secondary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-primary text-light-on-primary flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">tapas</span>
+            </div>
+            <span data-design-text-token="label-md" class="font-label text-label-md px-sm py-xs rounded-full bg-light-secondary-container text-light-on-secondary-container">Destaque</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Bolinhos</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Surpresa do Berinjela, Surpresa Vegetariana, Kiberinjela, Bacalhau e Arrozito.</p>
+          </div>
+        </a>
+
+        <!-- 4. Lasanhas -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-surface-container text-light-on-surface flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">restaurant</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Lasanhas</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Camadas artesanais gratinadas na hora com molho de tomate da casa.</p>
+          </div>
+        </a>
+
+        <!-- 5. Porções -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-surface-container text-light-on-surface flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">skillet</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Porções</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Clássicos de boteco preparados para compartilhar à mesa.</p>
+          </div>
+        </a>
+
+        <!-- 6. Cervejas -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-tertiary-container text-light-on-tertiary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">sports_bar</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Cervejas</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Rótulos tradicionais servidos bem gelados na mesa.</p>
+          </div>
+        </a>
+
+        <!-- 7. Caipirinhas -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-tertiary-container text-light-on-tertiary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">local_bar</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Caipirinhas</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Clássicas de boteco preparadas com frutas frescas.</p>
+          </div>
+        </a>
+
+        <!-- 8. Sem Álcool -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-surface-container text-light-on-surface flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">local_cafe</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Sem Álcool</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Refrigerantes, sucos naturais e águas.</p>
+          </div>
+        </a>
+
+        <!-- 9. Sobremesas -->
+        <a href="../bolinhos-desktop/BolinhosDesktop.html" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface-bright border border-light-outline-variant rounded-md p-lg flex flex-col justify-between gap-lg hover:border-light-primary transition-colors duration-state-change h-full">
+          <div class="flex items-start justify-between gap-md">
+            <div class="w-12 h-12 rounded bg-light-surface-container text-light-on-surface flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">cake</span>
+            </div>
+            <span class="material-symbols-outlined text-title-md text-light-outline" aria-hidden="true">arrow_forward</span>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <h2 data-design-text-token="headline-sm" class="font-headline text-headline-sm text-light-on-surface">Sobremesas</h2>
+            <p data-design-text-token="body-md" class="font-body text-body-md text-light-on-surface-variant text-pretty">Doces caseiros tradicionais para encerrar a refeição.</p>
+          </div>
+        </a>
+
+      </section>
+
+    </main>
+
+    <!-- Desktop Editorial Footer -->
+    <footer class="w-full border-t border-light-outline-variant bg-light-surface-container-low">
+      <div class="max-w-7xl mx-auto px-md lg:px-xl py-lg flex flex-wrap items-center justify-between gap-md">
+        <p data-design-text-token="body-sm" class="font-body text-body-sm text-light-on-surface-variant">
+          Bar do Berinjela · Desde 1964. A mesma família. No mesmo lugar. · Cardápio apenas para consulta.
+        </p>
+        <p data-design-text-token="label-md" class="font-label text-label-md text-light-on-surface-variant">
+          Conceito de design independente e não oficial.
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+</body></html>

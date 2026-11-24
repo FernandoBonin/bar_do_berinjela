@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar do Berinjela — Início (Mobile)</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      /** @type {import('tailwindcss').Config} */
+      globalThis.tailwind = globalThis.tailwind || {};
+      globalThis.tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "eggplant-deep": "#46264E",
+              "terracotta-warm": "#B85438",
+              "olive-muted": "#5A6648",
+              "cream-paper": "#FBF6EE",
+              "charcoal-ink": "#231F20",
+              "light-primary": "#2F1037",
+              "light-on-primary": "#FFFFFF",
+              "light-primary-container": "#46264E",
+              "light-on-primary-container": "#F4E4F7",
+              "light-secondary": "#9E4127",
+              "light-on-secondary": "#FFFFFF",
+              "light-secondary-container": "#F7DCD3",
+              "light-on-secondary-container": "#601400",
+              "light-tertiary": "#3F4B2F",
+              "light-on-tertiary": "#FFFFFF",
+              "light-tertiary-container": "#E3ECD4",
+              "light-on-tertiary-container": "#29341A",
+              "light-error": "#BA1A1A",
+              "light-on-error": "#FFFFFF",
+              "light-error-container": "#FFDAD6",
+              "light-on-error-container": "#93000A",
+              "light-background": "#FBF6EE",
+              "light-on-background": "#231F20",
+              "light-surface": "#FBF6EE",
+              "light-surface-dim": "#E8DFD1",
+              "light-surface-bright": "#FFFDF9",
+              "light-surface-container-lowest": "#FFFDF9",
+              "light-surface-container-low": "#F6EFE4",
+              "light-surface-container": "#EFE6D8",
+              "light-surface-container-high": "#E7DDCD",
+              "light-surface-container-highest": "#DFD4C2",
+              "light-on-surface": "#231F20",
+              "light-surface-variant": "#E6DDD3",
+              "light-on-surface-variant": "#4C4540",
+              "light-outline": "#7D736B",
+              "light-outline-variant": "#CFC4B8",
+              "light-inverse-surface": "#231F20",
+              "light-inverse-on-surface": "#FBF6EE",
+              "light-inverse-primary": "#E4B8EA",
+              "dark-primary": "#E4B8EA",
+              "dark-on-primary": "#44244C",
+              "dark-primary-container": "#46264E",
+              "dark-on-primary-container": "#F4E4F7",
+              "dark-secondary": "#FFB5A0",
+              "dark-on-secondary": "#601400",
+              "dark-secondary-container": "#7F2A12",
+              "dark-on-secondary-container": "#FFDBD1",
+              "dark-tertiary": "#BECBA7",
+              "dark-on-tertiary": "#29341A",
+              "dark-tertiary-container": "#2B361C",
+              "dark-on-tertiary-container": "#DAE8C2",
+              "dark-error": "#FFB4AB",
+              "dark-on-error": "#690005",
+              "dark-error-container": "#93000A",
+              "dark-on-error-container": "#FFDAD6",
+              "dark-background": "#1A1617",
+              "dark-on-background": "#F4EDE3",
+              "dark-surface": "#1A1617",
+              "dark-surface-dim": "#1A1617",
+              "dark-surface-bright": "#3D3637",
+              "dark-surface-container-lowest": "#131011",
+              "dark-surface-container-low": "#231F20",
+              "dark-surface-container": "#2A2526",
+              "dark-surface-container-high": "#342E2F",
+              "dark-surface-container-highest": "#3F3839",
+              "dark-on-surface": "#F4EDE3",
+              "dark-surface-variant": "#4C4540",
+              "dark-on-surface-variant": "#D5C9BE",
+              "dark-outline": "#9B9087",
+              "dark-outline-variant": "#4C4540",
+              "dark-inverse-surface": "#F4EDE3",
+              "dark-inverse-on-surface": "#231F20",
+              "dark-inverse-primary": "#75527D",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "24px",
+              full: "9999px",
+            },
+            spacing: {
+              xs: "4px",
+              sm: "8px",
+              md: "16px",
+              lg: "24px",
+              xl: "32px",
+              "2xl": "48px",
+              "3xl": "64px",
+            },
+            fontFamily: {
+              display: ['"Alegreya"', "sans-serif"],
+              headline: ['"Alegreya"', "sans-serif"],
+              title: ['"Lato"', "sans-serif"],
+              body: ['"Lato"', "sans-serif"],
+              label: ['"Lato"', "sans-serif"],
+              mono: ['"Source Code Pro"', "monospace"],
+            },
+            fontSize: {
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "54px",
+                  letterSpacing: "-0.5px",
+                  fontWeight: "700",
+                },
+              ],
+              "display-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "38px",
+                  letterSpacing: "-0.25px",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg": [
+                "36px",
+                {
+                  lineHeight: "42px",
+                  letterSpacing: "-0.25px",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-lg-mobile": [
+                "28px",
+                {
+                  lineHeight: "34px",
+                  letterSpacing: "-0.2px",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-md": [
+                "28px",
+                {
+                  lineHeight: "34px",
+                  letterSpacing: "-0.15px",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-sm": [
+                "22px",
+                { lineHeight: "28px", letterSpacing: "0px", fontWeight: "700" },
+              ],
+              "title-lg": [
+                "20px",
+                { lineHeight: "26px", letterSpacing: "0px", fontWeight: "700" },
+              ],
+              "title-md": [
+                "16px",
+                {
+                  lineHeight: "22px",
+                  letterSpacing: "0.1px",
+                  fontWeight: "700",
+                },
+              ],
+              "title-sm": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.1px",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": [
+                "17px",
+                { lineHeight: "26px", letterSpacing: "0px", fontWeight: "400" },
+              ],
+              "body-md": [
+                "15px",
+                { lineHeight: "23px", letterSpacing: "0px", fontWeight: "400" },
+              ],
+              "body-sm": [
+                "13px",
+                {
+                  lineHeight: "19px",
+                  letterSpacing: "0.1px",
+                  fontWeight: "400",
+                },
+              ],
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "18px",
+                  letterSpacing: "0.4px",
+                  fontWeight: "700",
+                },
+              ],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.5px",
+                  fontWeight: "700",
+                },
+              ],
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.5px",
+                  fontWeight: "700",
+                },
+              ],
+              "mono-sm": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.6px",
+                  fontWeight: "600",
+                },
+              ],
+            },
+            transitionDuration: {
+              "state-change": "150ms",
+              "surface-enter": "240ms",
+            },
+            transitionDelay: {
+              "state-change": "0ms",
+              "surface-enter": "0ms",
+            },
+            transitionTimingFunction: {
+              "state-change": "ease-out",
+              "surface-enter": "cubic-bezier(0.2, 0, 0, 1)",
+            },
+          },
+        },
+      };
+      if (typeof module !== "undefined")
+        module.exports = globalThis.tailwind.config;
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,700;1,500&amp;family=Lato:wght@400;700&amp;family=Source+Code+Pro:wght@500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined,
+      .material-symbols-rounded,
+      .material-symbols-sharp,
+      .material-icons {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        line-height: 1 !important;
+        box-sizing: content-box;
+        overflow: hidden;
+        white-space: nowrap;
+        direction: ltr;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body class="bg-light-surface text-light-on-surface font-body antialiased">
+    <div
+      class="min-h-[884px] flex flex-col max-w-md mx-auto bg-light-surface"
+      data-stitch-vh="min-h-[884px]===min-h-screen"
+    >
+      <!-- Compact Mobile Header -->
+      <header
+        class="sticky top-0 z-30 bg-light-surface border-b border-light-outline-variant px-md py-md flex items-center justify-between"
+      >
+        <a
+          href="HomeMobile.html"
+          class="flex items-center gap-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-light-primary rounded"
+        >
+          <div
+            class="w-9 h-9 rounded bg-light-primary text-light-on-primary flex items-center justify-center"
+          >
+            <span
+              class="font-headline text-title-lg"
+              data-design-text-token="title-lg"
+              >B</span
+            >
+          </div>
+          <div class="flex flex-col">
+            <span
+              data-design-text-token="title-sm"
+              class="font-headline text-title-sm text-light-on-surface leading-none"
+              >Bar do Berinjela</span
+            >
+            <span
+              data-design-text-token="mono-sm"
+              class="font-mono text-mono-sm text-light-on-surface-variant"
+              >TATUAPÉ · SP</span
+            >
+          </div>
+        </a>
+        <span
+          data-component-id="badge-heritage"
+          data-component-type="badge"
+          data-component-variant="status"
+          role="status"
+          class="inline-flex items-center px-sm py-xs rounded-full bg-light-tertiary-container text-light-on-tertiary-container border border-light-outline-variant"
+        >
+          <span data-design-text-token="mono-sm" class="font-mono text-mono-sm"
+            >DESDE 1964</span
+          >
+        </span>
+      </header>
+
+      <!-- Main Content -->
+      <main class="flex-1 px-md pt-lg pb-3xl flex flex-col gap-2xl">
+        <!-- Hero Section -->
+        <section class="flex flex-col gap-md">
+          <div
+            class="relative rounded-md overflow-hidden border border-light-outline-variant bg-light-surface-container"
+          >
+            <div class="aspect-[4/3] w-full overflow-hidden">
+              <img
+                src="https://lh3.googleusercontent.com/aida/ALJJyrAdR70WmWqCxq5AtQA5TjWQrJW2J1XtYuG-n8lsuHMxcbLqSVlzSfNQJnlyQOGYFAqugzrO9RElXIYKzJws6CI5HfMKWUv6ccIcqqB6uCnijVCmNm3gYMPrcdWapSHbp_igllHmCRvCeI94b06srZmFSBwBecjCcqY34X01K-0AU2iqHH8eRzHtOIe4kJv1Dkrg5nVf6J6KDa7XIJkHHP6P5YfMFnRs-Xt3fJ8uzA92XT7bpdMYYs7Su8oP"
+                alt="Família do Bar do Berinjela à mesa no salão tradicional do Tatuapé"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <div
+              class="px-md py-sm bg-light-primary text-light-on-primary flex items-center justify-between"
+            >
+              <span
+                data-design-text-token="label-md"
+                class="font-label text-label-md"
+                >A mesma família. No mesmo lugar.</span
+              >
+              <span
+                data-design-text-token="mono-sm"
+                class="font-mono text-mono-sm"
+                >1964</span
+              >
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-sm pt-xs">
+            <h1
+              data-component-id="typography-display"
+              data-component-type="typography"
+              data-component-variant="display"
+              data-design-text-token="display-lg-mobile"
+              class="font-display text-display-lg-mobile text-light-on-surface text-balance"
+            >
+              Tradição que atravessa gerações
+            </h1>
+            <p
+              data-component-id="typography-body"
+              data-component-type="typography"
+              data-component-variant="body"
+              data-design-text-token="body-lg"
+              class="font-body text-body-lg text-light-on-surface-variant text-pretty"
+            >
+              Desde 1964, os sabores que fazem parte da história do Tatuapé.
+            </p>
+          </div>
+
+          <div class="pt-xs">
+            <a
+              href="../categories-mobile/CategoriesMobile.html"
+              data-component-id="button-primary"
+              data-component-type="button"
+              data-component-variant="primary"
+              class="w-full inline-flex items-center justify-center gap-sm px-lg py-md rounded bg-light-primary text-light-on-primary hover:bg-light-primary-container focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-primary transition-colors duration-state-change ease-state-change"
+            >
+              <span
+                class="material-symbols-outlined text-title-md"
+                aria-hidden="true"
+                >menu_book</span
+              >
+              <span
+                data-design-text-token="label-lg"
+                class="font-label text-label-lg"
+                >Explorar Cardápio</span
+              >
+            </a>
+          </div>
+        </section>
+
+        <!-- Award-Winning Specialties -->
+        <section
+          class="flex flex-col gap-md border-t border-light-outline-variant pt-lg"
+        >
+          <div class="flex items-center justify-between gap-sm">
+            <h2
+              data-design-text-token="headline-lg-mobile"
+              class="font-headline text-headline-lg-mobile text-light-on-surface"
+            >
+              Especialidades da Casa
+            </h2>
+            <a
+              href="../bolinhos-mobile/BolinhosMobile.html"
+              class="font-label text-label-md text-light-primary underline underline-offset-4 shrink-0"
+            >
+              <span data-design-text-token="label-md">Ver bolinhos</span>
+            </a>
+          </div>
+
+          <div class="flex flex-col gap-md">
+            <!-- Featured Award Dish -->
+            <a
+              href="../surpresa-mobile/SurpresaMobile.html"
+              data-component-id="card-interactive"
+              data-component-type="card"
+              data-component-variant="interactive"
+              class="group bg-light-surface-bright border border-light-outline-variant rounded-md overflow-hidden flex flex-col hover:border-light-primary transition-colors duration-state-change"
+            >
+              <div
+                class="aspect-[4/3] w-full bg-light-surface-container overflow-hidden"
+              >
+                <img
+                  src="/images/surpresa-do-berinjela.webp"
+                  alt="Surpresa do Berinjela"
+                  class="w-full h-full object-cover"
+                />
+              </div>
+              <div class="p-md flex flex-col gap-xs">
+                <span
+                  data-design-text-token="label-md"
+                  class="font-label text-label-md text-light-tertiary"
+                  >Receitas Originais</span
+                >
+                <h3
+                  data-design-text-token="title-lg"
+                  class="font-headline text-title-lg text-light-on-surface"
+                >
+                  Berinjelas &amp; Lasanhas
+                </h3>
+                <p
+                  data-design-text-token="body-md"
+                  class="font-body text-body-md text-light-on-surface-variant text-pretty"
+                >
+                  Preparos tradicionais de família servidos quentes na mesa do
+                  boteco.
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Family Heritage & Discreet Timeline -->
+        <section
+          class="bg-light-surface-container-low border border-light-outline-variant rounded-md p-md flex flex-col gap-md"
+        >
+          <div
+            class="flex flex-col gap-xs border-b border-light-outline-variant pb-sm"
+          >
+            <span
+              data-design-text-token="mono-sm"
+              class="font-mono text-mono-sm text-light-secondary"
+              >MEMÓRIA DO TATUAPÉ</span
+            >
+            <h2
+              data-design-text-token="headline-md"
+              class="font-headline text-headline-md text-light-on-surface"
+            >
+              História em Família
+            </h2>
+            <p
+              data-design-text-token="body-md"
+              class="font-body text-body-md text-light-on-surface-variant text-pretty"
+            >
+              Desde 1964. A mesma família. No mesmo lugar. Um ponto de encontro
+              preservado no Tatuapé com receitas autorais de berinjela e
+              petiscos clássicos de boteco.
+            </p>
+          </div>
+
+          <ol class="flex flex-col gap-md">
+            <li class="flex items-start gap-md">
+              <span
+                data-design-text-token="mono-sm"
+                class="font-mono text-mono-sm px-sm py-xs rounded bg-light-primary text-light-on-primary shrink-0"
+                >1964</span
+              >
+              <div class="flex flex-col">
+                <span
+                  data-design-text-token="title-sm"
+                  class="font-title text-title-sm text-light-on-surface"
+                  >Fundação no Tatuapé</span
+                >
+                <span
+                  data-design-text-token="body-sm"
+                  class="font-body text-body-sm text-light-on-surface-variant"
+                  >Início das atividades familiares no mesmo endereço.</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start gap-md">
+              <span
+                data-design-text-token="mono-sm"
+                class="font-mono text-mono-sm px-sm py-xs rounded bg-light-secondary text-light-on-secondary shrink-0"
+                >2013</span
+              >
+              <div class="flex flex-col">
+                <span
+                  data-design-text-token="title-sm"
+                  class="font-title text-title-sm text-light-on-surface"
+                  >Comida di Buteco</span
+                >
+                <span
+                  data-design-text-token="body-sm"
+                  class="font-body text-body-sm text-light-on-surface-variant"
+                  >Reconhecimento com a receita Surpresa do Berinjela.</span
+                >
+              </div>
+            </li>
+            <li class="flex items-start gap-md">
+              <span
+                data-design-text-token="mono-sm"
+                class="font-mono text-mono-sm px-sm py-xs rounded bg-light-tertiary text-light-on-tertiary shrink-0"
+                >HOJE</span
+              >
+              <div class="flex flex-col">
+                <span
+                  data-design-text-token="title-sm"
+                  class="font-title text-title-sm text-light-on-surface"
+                  >Mesma família, mesma cozinha</span
+                >
+                <span
+                  data-design-text-token="body-sm"
+                  class="font-body text-body-sm text-light-on-surface-variant"
+                  >Mais de seis décadas recebendo gerações no bairro.</span
+                >
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!-- Editorial Footer Note -->
+        <footer
+          class="border-t border-light-outline-variant pt-md flex flex-col gap-xs text-center"
+        >
+          <p
+            data-design-text-token="body-sm"
+            class="font-body text-body-sm text-light-on-surface-variant"
+          >
+            Cardápio digital exclusivo para consulta presencial e descoberta.
+          </p>
+          <p
+            data-design-text-token="label-md"
+            class="font-label text-label-md text-light-on-surface-variant"
+          >
+            Conceito de design independente e não oficial.
+          </p>
+        </footer>
+      </main>
+
+      <!-- Mobile Bottom Navigation -->
+      <nav
+        aria-label="Navegação principal"
+        class="fixed bottom-0 left-0 right-0 z-40 bg-light-surface-bright border-t border-light-outline-variant max-w-md mx-auto"
+      >
+        <div class="grid grid-cols-3 h-16">
+          <a
+            href="HomeMobile.html"
+            aria-current="page"
+            class="flex flex-col items-center justify-center gap-xs text-light-primary border-t-2 border-light-primary"
+          >
+            <span
+              class="material-symbols-outlined text-title-lg"
+              style="font-variation-settings: &#39;FILL&#39; 1;"
+              aria-hidden="true"
+              >home</span
+            >
+            <span
+              data-design-text-token="label-md"
+              class="font-label text-label-md"
+              >Início</span
+            >
+          </a>
+          <a
+            href="../categories-mobile/CategoriesMobile.html"
+            class="flex flex-col items-center justify-center gap-xs text-light-on-surface-variant hover:text-light-primary"
+          >
+            <span
+              class="material-symbols-outlined text-title-lg"
+              aria-hidden="true"
+              >grid_view</span
+            >
+            <span
+              data-design-text-token="label-md"
+              class="font-label text-label-md"
+              >Categorias</span
+            >
+          </a>
+          <a
+            href="../bolinhos-mobile/BolinhosMobile.html"
+            class="flex flex-col items-center justify-center gap-xs text-light-on-surface-variant hover:text-light-primary"
+          >
+            <span
+              class="material-symbols-outlined text-title-lg"
+              aria-hidden="true"
+              >tapas</span
+            >
+            <span
+              data-design-text-token="label-md"
+              class="font-label text-label-md"
+              >Bolinhos</span
+            >
+          </a>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>
